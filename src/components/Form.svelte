@@ -1,5 +1,6 @@
 <script>
   import Input from "./Input.svelte";
+  import Select from "./Select.svelte";
 
   export let onSubmit;
   export let fields;
@@ -23,7 +24,9 @@
     <!-- Loop the fields and render the correct representation based on field.type -->
     {#each fields as field}
         {#if field.type === 'Input'}
-        <Input bind:value={field.value} label={field.label} placeholder={field.placeholder} />
+            <Input bind:value={field.value} label={field.label} placeholder={field.placeholder} />
+        {:else if field.type === "Select"}
+            <Select bind:value={field.value} label={field.label} options={field.options}/>
         {/if}
     {/each}
     <button type="submit">Submit</button>

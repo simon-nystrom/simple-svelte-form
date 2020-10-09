@@ -17,6 +17,17 @@
       placeholder: "Enter last name...",
       label: "Last name",
     },
+    {
+      name: "favoriteColor",
+      type: "Select",
+      value: "green",
+      label: "Favorite color",
+      options: [
+        { label: "Red", value: "red" },
+        { label: "Green", value: "green" },
+        { label: "Blue", value: "blue" },
+      ],
+    },
   ];
 
   let result = {};
